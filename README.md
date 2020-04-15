@@ -7,7 +7,7 @@ I will call your current repo as `old-repo` and the target repo as `new-repo`
 ### Clone your old repo
 `git clone old-repo`
 
-### Download all project branchs
+### Download all project branches
 `git branch -a | grep -v HEAD | perl -ne 'chomp($_); s|^\*?\s*||; if (m|(.+)/(.+)| && not $d{$2}) {print qq(git branch --track $2 $1/$2\n)} else {$d{$_}=1}' | csh -xfs`
 
 ### Rename your `old-repo` remote
